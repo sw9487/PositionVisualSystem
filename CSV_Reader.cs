@@ -67,7 +67,6 @@ public class CSV_Reader : MonoBehaviour
                 // 第4筆資料為pos z
 
                 var targetPos = new Vector3(float.Parse(values[2]), float.Parse(values[3]), float.Parse(values[4]));
-                //targetPos = new Vector3(float.Parse(values[2]), float.Parse(values[4]), float.Parse(values[3]));
                 _targetPosDatas.Add(targetPos);
 
                 // 第5筆資料為rot x
@@ -75,7 +74,6 @@ public class CSV_Reader : MonoBehaviour
                 // 第7筆資料為rot z
 
                 var targetRot = new Vector3(float.Parse(values[2]), float.Parse(values[3]), float.Parse(values[4]));
-                //targetRot = new Vector3(float.Parse(values[2]), float.Parse(values[4]), float.Parse(values[3]));
                 _targetRotDatas.Add(targetRot);
 
                 // sensor2
@@ -90,7 +88,6 @@ public class CSV_Reader : MonoBehaviour
 
                 // 取平均
                 var pos = new Vector3((float.Parse(values[13]) + float.Parse(values[24])) / 2, (float.Parse(values[14]) + float.Parse(values[25])) / 2, (float.Parse(values[15]) + float.Parse(values[26])) / 2);
-                //pos = new Vector3((float.Parse(values[13]) + float.Parse(values[24])) / 2, (float.Parse(values[15]) + float.Parse(values[26])) / 2, (float.Parse(values[14]) + float.Parse(values[25])) / 2);
                 _posDatas.Add(pos);
 
                 Debug.LogError($"第{data}筆資料讀取中...");
@@ -107,7 +104,6 @@ public class CSV_Reader : MonoBehaviour
 
                 // 取平均
                 var rot = new Vector3((float.Parse(values[16]) + float.Parse(values[27]))/2, (float.Parse(values[17]) + float.Parse(values[28])) / 2, (float.Parse(values[18]) + float.Parse(values[29])) / 2);
-                //rot = new Vector3((float.Parse(values[16]) + float.Parse(values[27])) / 2, (float.Parse(values[18]) + float.Parse(values[29])) / 2, (float.Parse(values[17]) + float.Parse(values[28])) / 2);
                 _rotDatas.Add(rot);
             }
             data++;
